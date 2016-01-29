@@ -1,0 +1,12 @@
+create table mensaje (
+id number(5) primary key,
+de varchar2(20),
+para varchar2(20),
+texto varchar2(200)
+);
+
+create sequence sq_mensaje;
+
+insert into mensaje (id,de,para,texto) values (sq_mensaje.nextval,'Gustavo','Todos','Que les parece el curso?');
+insert into mensaje (id,de,para,texto) values (sq_mensaje.nextval,'TedSalvador','Todos','MI IP es:172.17.3.141');
+commit;
